@@ -104,15 +104,15 @@ public:
 
     void draw() const override
     {
-        ::wclear( raw_window_.get() );
+        //::wclear( raw_window_.get() );
 
+        this->draw_border();
         for ( const auto& w : children_ )
         {
             w->draw();
         }
 
-        hook_.refresh();
-        this->draw_border();
+        //hook_.refresh();
         this->refresh();
     }
 
@@ -124,12 +124,12 @@ public:
     void refresh() const override
     {
         hook_.refresh();
-        ::wrefresh( raw_window_.get() );
 
         for ( const auto& w : children_ )
         {
             w->refresh();
         }
+        ::wrefresh( raw_window_.get() );
     }
 
     void get_char() const override

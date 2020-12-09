@@ -35,6 +35,7 @@ bin
 # CLion
 .idea
 cmake-build*
+CMakeFiles/
 
 # build directory
 build

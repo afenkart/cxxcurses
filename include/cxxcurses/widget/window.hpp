@@ -112,7 +112,7 @@ public:
             w->draw();
         }
 
-        //hook_.refresh();
+        hook_.refresh();
         this->refresh();
     }
 
